@@ -1,0 +1,114 @@
+/*ESTILOS GENERALES*/
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 1,5vw; /*Tamaño pagina letra universal*/
+
+}
+
+/*ESTILOS AL HEADER*/
+header{
+    background-color: #10002B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 100px;
+    padding: 10px;
+}
+h1{
+    color: white;
+}
+.btn{
+    color: white;
+    padding-right: 30px;
+    text-decoration: none;
+}
+
+/*ESTILOS AL NAVBAR*/
+.menu{
+    background-color: #5A189A;
+    border-top: 5px solid #a93afd;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */
+}
+.botonera{
+    list-style: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+}
+.botonera a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; 
+}
+
+/*ESTILOS AL CUERPO PRINCIPAL*/
+main{
+    height: 300px;
+    background-color: #e2bff9;
+}
+#poesia{
+    font-style: italic;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/*ESTLOS AL FOOTER*/
+footer{
+    background-color:#10002B;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer div{ /*Cada columna del footer ocupa su 100% equitativamente*/
+    width: 100%;
+    padding: 10px;
+}
+footer div p{
+    padding: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */
+}
+.iconos{
+    list-style: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+}
+.iconos span{
+    font-size: 40px;
+}
+
+.ubicacion{
+    display: flex;
+}
+.ubicacion iframe{
+    border-radius: 10px;
+}
+.ubicacion p{
+    padding-left: 20px;
+}
