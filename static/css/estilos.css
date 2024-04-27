@@ -60,14 +60,6 @@ main{
     height: auto;
     background-color: #e2bff9;
 }
-/* Configuración básica para el contenedor principal */
-.contenedor {
-    display: grid; 
-    gap: 10px; /* Espaciado entre elementos */
-    justify-items: center; /* Alineación horizontal de los elementos */
-    text-align: center; /* Alineación del texto */
-    padding: 20px; /* Espaciado interno */
-}
 
 /*ESTLOS AL FOOTER*/
 footer {
@@ -113,94 +105,10 @@ footer .ubicacion p {
     font-size: 1vw;
 }
 
-                            /* BREAKPOINTS PARA PANTALLAS */
 
-/* 1- Para Pantallas (Desktops, Laptops y Netbooks) de mas de 768px */
-@media only screen and (min-width: 768px) {
-    .contenedor {
-      grid-template-columns: repeat(5, 1fr); /* Cinco columnas */
-      grid-template-rows: repeat(6, auto); /* Seis filas*/
-    }
-    /* Posicionar el h2 a lo largo de las cinco columnas */
-    .contenedor h2 {
-      grid-column: span 5;
-      font-size: 4vw; /* Tamaño del texto */
-      padding-bottom: 2%; 
-    }
-    .contenedor h3{
-        grid-column: 1 / span 2; /* Primera columna y abarca 2*/
-        grid-row: 2; /* En fila 2 */
-        font-size: 2vw;
-        padding-left: 5%;
-        padding-top: 2%;
-    }
-    .contenedor #poesia {
-      text-align: right;
-      font-style: italic;
-      padding-left: 10%;
-      padding-right: 1%;
-      padding-top: 10%;
-      padding-bottom: 20%; 
-      font-size: 1.5vw;
-      grid-column: 1 /span 2;
-      grid-row: 4 / span 2; 
-    }
-    .contenedor .flyer {
-      grid-column: span 3;
-      grid-row: span 4;     
-    }
-}
-
-/* 2- Para Pantallas (Tablets o Celulares) de hasta 767px */
-@media only screen and (max-width: 767px) {
-    .contenedor {
-        grid-template-columns: 1fr; 
-        grid-template-rows: repeat(30, auto); /* 30 filas*/
-    }  
-    .contenedor h2 {
-        grid-column: 1;
-    }
-    .contenedor h3{
-        grid-column: 1; 
-        grid-row: 2; /* En fila 2 */   
-    }
-    .contenedor #poesia {
-        text-align: center;
-        font-style: italic; 
-        grid-column: 1;
-        grid-row: 3; 
-    }
-    .contenedor .flyer {
-        grid-column: 1;
-        grid-row: 4 / span 26;  /* A partir de la fila 4 el flyer ocupa un total de 26 filas para cubrir la totalidad de su tamaño*/
-    }
-}
-  
-/* 3- Para Pantallas (Celulares) con menos de 599px */
+/* Para Pantallas (Celulares) con menos de 599px */
 
 @media only screen and (max-width: 599px) {
-
-    .contenedor {
-        grid-template-columns: 1fr; 
-        grid-template-rows: repeat(22, auto); 
-    }  
-    .contenedor h2 {
-        grid-column: 1;
-    }
-    .contenedor h3{
-        grid-column: 1; 
-        grid-row: 2;   
-    }
-    .contenedor #poesia {
-        text-align: center;
-        font-style: italic; 
-        grid-column: 1;
-        grid-row: 3; 
-    }
-    .contenedor .flyer {
-        grid-column: 1;
-        grid-row: 4 / span 18;  
-    }
 
     footer {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
