@@ -1,0 +1,237 @@
+/*ESTILOS GENERALES*/
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/*ESTILOS AL HEADER*/
+header{
+    background-color: #10002B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 7vw;
+    padding: 10px;
+}
+h1{
+    color: white;
+    font-size: 3vw;
+}
+.btn{
+    color: white;
+    font-size: 1.5vw;
+    padding-right: 30px;
+    text-decoration: none;
+}
+
+/*ESTILOS AL NAVBAR*/
+.menu{
+    background-color: #5A189A;
+    border-top: 5px solid #a93afd;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */
+}
+.botonera{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    width: 80%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+}
+.botonera a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw; 
+}
+
+/*ESTILOS AL CUERPO PRINCIPAL*/
+main{
+    height: auto;
+    background-color: #e2bff9;
+}
+/* Configuración básica para el contenedor principal */
+.contenedor {
+    display: grid; 
+    gap: 10px; /* Espaciado entre elementos */
+    justify-items: center; /* Alineación horizontal de los elementos */
+    text-align: center; /* Alineación del texto */
+    padding: 20px; /* Espaciado interno */
+}
+
+/*ESTLOS AL FOOTER*/
+footer {
+    background-color: #10002B;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas para pantallas grandes */
+    grid-template-rows: auto; /* Ajuste automático de altura */
+    gap: 10px; /* Espacio entre elementos */
+    padding: 10px; /* Espacio interno */
+}
+footer #copyright{
+    text-align: left; 
+    font-style: italic;
+    font-size: 1.2vw;
+    padding-top: 2%;
+    padding-left: 3%;
+}
+footer .redes,
+footer .ubicacion {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+footer .iconos {
+    list-style: none;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 3vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Distribuye equitativamente */
+    width: 100%; /* Ocupar todo el ancho de su contenedor */
+}
+footer .ubicacion iframe {
+    border-radius: 10px; /* Borde redondeado para iframe */
+    width: 50%;
+}
+footer .ubicacion p {
+    padding-left: 3%; /* Espacio entre iframe y texto */
+    padding-right: 5%;
+    text-align: justify;
+    font-size: 1vw;
+}
+
+                            /* BREAKPOINTS PARA PANTALLAS */
+
+/* 1- Para Pantallas (Desktops, Laptops y Netbooks) de mas de 768px */
+@media only screen and (min-width: 768px) {
+    .contenedor {
+      grid-template-columns: repeat(5, 1fr); /* Cinco columnas */
+      grid-template-rows: repeat(6, auto); /* Seis filas*/
+    }
+    /* Posicionar el h2 a lo largo de las cinco columnas */
+    .contenedor h2 {
+      grid-column: span 5;
+      font-size: 4vw; /* Tamaño del texto */
+      padding-bottom: 2%; 
+    }
+    .contenedor h3{
+        grid-column: 1 / span 2; /* Primera columna y abarca 2*/
+        grid-row: 2; /* En fila 2 */
+        font-size: 2vw;
+        padding-left: 5%;
+        padding-top: 2%;
+    }
+    .contenedor #poesia {
+      text-align: right;
+      font-style: italic;
+      padding-left: 10%;
+      padding-right: 1%;
+      padding-top: 10%;
+      padding-bottom: 20%; 
+      font-size: 1.5vw;
+      grid-column: 1 /span 2;
+      grid-row: 4 / span 2; 
+    }
+    .contenedor .flyer {
+      grid-column: span 3;
+      grid-row: span 4;     
+    }
+}
+
+/* 2- Para Pantallas (Tablets o Celulares) de hasta 767px */
+@media only screen and (max-width: 767px) {
+    .contenedor {
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(30, auto); /* 30 filas*/
+    }  
+    .contenedor h2 {
+        grid-column: 1;
+    }
+    .contenedor h3{
+        grid-column: 1; 
+        grid-row: 2; /* En fila 2 */   
+    }
+    .contenedor #poesia {
+        text-align: center;
+        font-style: italic; 
+        grid-column: 1;
+        grid-row: 3; 
+    }
+    .contenedor .flyer {
+        grid-column: 1;
+        grid-row: 4 / span 26;  /* A partir de la fila 4 el flyer ocupa un total de 26 filas para cubrir la totalidad de su tamaño*/
+    }
+}
+  
+/* 3- Para Pantallas (Celulares) con menos de 599px */
+
+@media only screen and (max-width: 599px) {
+
+    .contenedor {
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(22, auto); 
+    }  
+    .contenedor h2 {
+        grid-column: 1;
+    }
+    .contenedor h3{
+        grid-column: 1; 
+        grid-row: 2;   
+    }
+    .contenedor #poesia {
+        text-align: center;
+        font-style: italic; 
+        grid-column: 1;
+        grid-row: 3; 
+    }
+    .contenedor .flyer {
+        grid-column: 1;
+        grid-row: 4 / span 18;  
+    }
+
+    footer {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        grid-template-rows: auto; /* Ajuste automático de altura */
+        text-align: center; /* Centra el texto para cada elemento */
+    }
+    footer .iconos {
+        justify-content: center; /* Centra horizontalmente */
+    }
+    footer #copyright{
+        text-align: center; 
+        font-size: 2vw;
+    }
+    footer .iconos {
+        padding-left: 25%;
+        padding-right: 25%;
+        padding-top: 2%;
+        padding-bottom: 1%;
+        font-size: 4vw;
+        margin: 0;
+        display: flex;
+        justify-content: space-between; /* Distribuye equitativamente */
+        width: 100%; /* Ocupar todo el ancho de su contenedor */
+    }
+    footer .ubicacion {
+        display: flex;
+        flex-direction: column;
+    }
+    footer .ubicacion p {
+        font-size: 2vw;
+        padding-top: 2%;
+    }
+} 
+
