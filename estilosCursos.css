@@ -1,0 +1,164 @@
+/*ESTILOS GENERALES*/
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 1.5vw; /*Tamaño página letra universal*/
+}
+
+/*ESTILOS AL HEADER*/
+header{
+    background-color: #10002B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 100px;
+    padding: 10px;
+}
+h1{
+    color: white;
+}
+.btn{
+    color: white;
+    padding-right: 30px;
+    text-decoration: none;
+}
+
+/*ESTILOS AL NAVBAR*/
+.menu{
+    background-color: #5A189A;
+    border-top: 5px solid #a93afd;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */
+}
+.botonera{
+    list-style: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+}
+.botonera a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; 
+}
+.banner .btn {
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+.banner .btn:hover {
+    background-color: #555; /* Change background color on hover */
+}
+/*ESTILOS AL CUERPO PRINCIPAL*/
+main{
+    min-height: calc(70vh - 70px); /* 70px es la altura del header */
+    background-color: #e2bff9;
+    padding-bottom: 20px; /* Altura estimada del footer */
+    position: relative; /* Asegura que el contenido del main se muestre correctamente */
+}
+#poesia{
+    font-style: italic;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/*ESTLOS AL FOOTER*/
+/*ESTLOS AL FOOTER*/
+footer{
+    background-color:#10002B;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 999; /* Asegura que el footer esté por encima de otros elementos */
+    margin-top: 20px; /* Add margin to separate from main content */
+
+}
+footer div{ /*Cada columna del footer ocupa su 100% equitativamente*/
+    width: 100%;
+    padding: 10px;
+}
+footer div p{
+    padding: 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */
+}
+.iconos{
+    list-style: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+}
+.iconos span{
+    font-size: 40px;
+}
+
+.ubicacion{
+    display: flex;
+}
+.ubicacion iframe{
+    border-radius: 10px;
+}
+.ubicacion p{
+    padding-left: 20px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    height: 100%; /* Para que el grid ocupe todo el alto del main */
+}
+.grid-item {
+    text-decoration: none; /* Remove underline */
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+.grid-item img {
+    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+    height: auto; /* Permitir que la altura se ajuste automáticamente manteniendo la proporción */
+    max-width: 300px; /* Limitar el ancho máximo de las imágenes para mantener la consistencia */
+    min-height: 190px;
+    max-height: 200px; /* Limitar la altura máxima de las imágenes para mantener la consistencia */
+    border-radius: 10px; /* Añadir esquinas redondeadas */
+}
+.grid-item .title{
+    color: inherit; /* Use the default text color */
+    text-align: center;
+    padding-top: 30px;
+    transition: background-color 0.3s; /* Smooth transition */
+    padding: 20px; /* Add padding for better appearance */
+}
+    /* Styles for the elements within the grid items */
+.grid-item .title:hover {
+    background-color: #5a189a; /* Change background color on hover to dark purple */
+    color: white; /* Change text color on hover */
+    }
+
+/* Media queries para diseño responsivo */
