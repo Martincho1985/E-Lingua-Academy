@@ -4,7 +4,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: 100vh;
-    background-image: url('img/nosotros.jpg'); /* Ruta de la imagen de fondo */
+    background-image:url(../img/nosotros1.jpg); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
         
@@ -12,7 +12,7 @@
 
 .content-nos {
     background-color: rgba(255, 255, 255, 0.8); /* Color de fondo para el contenido */
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     align-self: center; /* Centrar verticalmente el contenido */
     
@@ -20,10 +20,10 @@
 .container-nos p{
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: bold;
     font-style: normal;
-    font-size: 24px;
-    color: #10002B;
+    font-size: 32px;
+    color:#5a189a;
 }
 .nosotros {
     background-color: #10002B; /* Color de fondo del encabezado */
