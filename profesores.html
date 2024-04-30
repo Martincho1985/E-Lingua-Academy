@@ -6,27 +6,38 @@
   <title>Perfiles de Profesionales de Idiomas</title>
   <link rel="stylesheet" href="static/css/estilos.css">
   <link rel="stylesheet" href="static/css/profesores.css">
-  <link rel="stylesheet" href="icons/icons.css">
+  <link rel="stylesheet" href="static/icons/icons.css">
 </head>
 <body>
-  <header>  
+  <header>
     <div class="banner"> 
-      <img id="logo" src="img/logo.png" alt="logo">
-      <h1>E-LINGUA ACADEMY</h1>
+        <img id="logo" src="static/img/logo.png" alt="logo">
+        <h1>E-LINGUA ACADEMY</h1>
     </div>
-    <div class="banner">
-      <a class="btn" href="#">Log in</a>
-      <a class="btn" href="#">Sign up</a>
-    </div>
-  </header>
-  <nav class="menu">
-   <ul class="botonera">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="#">Cursos</a></li>
-     <li><a href="#">Contacto</a></li>
-     <li><a href="#">Metodos de Pagos</a></li>
-   </ul>
-  </nav>
+   <div class="banner">
+        <a class="btn" href="#">Log in</a>
+        <a class="btn" href="#">Sign up</a>
+   </div>
+</header>
+<nav class="menu">
+    <ul class="botonera">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">Cursos <span class="icon-arrow-down2"></span></button>
+           <div class="dropdown-content">
+             <a href="#">Alemán</a>
+             <a href="#">Francés</a>
+             <a href="#">Inglés</a>
+             <a href="#">Italiano</a>
+             <a href="#">Portugues</a>
+           </div>
+          </div>
+        </li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Metodos de Pagos</a></li>
+    </ul>
+</nav>
   <div class="grid-container">
     <div class="profesor">
       <img src="profesor1.jpg" alt="Mantin">
