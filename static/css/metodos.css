@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/******Header********/
+
+.header {
+    position: relative; /*tenia position: fixed*/
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #10002B;
+    border-bottom: none;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 7vw;
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+    font-size: 3vw;
+}
+
+.banner .btn {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    transition: background-color 0.3s;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+/**********Nav***********/
+.menu{
+    background-color: #5A189A;
+    border-top: 5px solid #a93afd;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */
+}
+.botonera{
+    list-style: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Para centrar verticalmente */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+}
+.botonera a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw; 
+}
+
+/****Body*****/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e2bff9;
+    padding: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container form{
+    width: 700px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+form .fila{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.fila .columna{
+    flex: 1 1 250px;
+}
+
+.columna .titulo{
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.columna .input-box{
+    margin: 15px 0;
+}
+
+.input-box span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.columna .flex{
+    display: flex;
+    gap: 15px;
+}
+
+.flex .input-box{
+    margin-top: 5px;
+}
+
+.input-box img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+form .boton{
+    width: 100%;
+    padding: 12px;
+    background: #8175d3;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+form .boton:hover{
+    background: #6a5acd;
+}
