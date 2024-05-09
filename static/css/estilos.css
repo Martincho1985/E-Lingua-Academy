@@ -20,14 +20,14 @@ header{
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
-    border-radius: 5px; /* Add rounded corners */
+    padding: 10px 20px; 
+    border-radius: 5px; 
     font-size: 1.5vw;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s; 
     padding-right: 30px;
 }
 .banner .btn:hover {
-    background-color: #555; /* Change background color on hover */
+    background-color: #555; 
 }
 #logo{
     width: 7vw;
