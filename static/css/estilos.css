@@ -35,7 +35,7 @@ header{
 }
 h1{
     color: white;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
 }
 
 /*ESTILOS AL NAVBAR*/
@@ -59,8 +59,8 @@ h1{
     
 }
 .botonera a {
-    border-radius: 10px;
-    border: 2px solid #c77dff;
+    /*border-radius: 10px;*/
+    /*border: 2px solid #c77dff;*/
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -74,6 +74,8 @@ h1{
 .dropdown {
     position: relative;
     display: inline-block;
+    
+    
 }
 
 .dropdown-content {
@@ -101,8 +103,8 @@ h1{
 }
 
 .dropbtn {
-    border-radius: 10px;
-    border: 2px solid #c77dff;
+    /*border-radius: 10px;*/
+    /*border: 2px solid #c77dff;*/
     background-color: #5A189A;
     color: white;
     padding: 15px 16px;
