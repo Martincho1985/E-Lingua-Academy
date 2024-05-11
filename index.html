@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="static/css/estilos.css">
     <link rel="stylesheet" href="static/css/flyer.css">
     <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/icons/icons.css"> 
     <script src="static/js/flyer.js"></script>
+    
 </head>
 <body>
     <header>
@@ -20,23 +22,42 @@
             <img id="logo" src="static/img/logo.png" alt="logo">
             <h1>E-LINGUA ACADEMY</h1>
         </div>
-        <div class="banner">
+       <div class="banner">
             <a class="btn" href="login.html">Log in</a>
             <a class="btn" href="registro.html">Sign up</a>
-        </div>
+       </div>
     </header>
 
     <nav class="menu">
         <ul class="botonera">
-            <li><a href="#">Acerca de Nosotros</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
+            <li>
+                <div class="dropdown">
+                    <a href="nosotros.html" class="dropbtn">Acerca de Nosotros <span class="icon-arrow-down2"></span></a>
+                    <div class="dropdown-content">
+                        <a href="profesores.html">Equipo</a>
+                        <a href="nosotros.html">Historia</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Cursos <span class="icon-arrow-down2"></span></button>
+                   <div class="dropdown-content">
+                     <a href="#">Alemán</a>
+                     <a href="#">Francés</a>
+                     <a href="#">Inglés</a>
+                     <a href="#">Italiano</a>
+                     <a href="#">Portugues</a>
+                   </div>
+                </div>
+            </li> <!-- Cambie el enlace por un botón -->
             <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="metodos.html">Metodos de Pagos</a></li> <!-- Se añade el link -->
+            <li><a href="metodos.html">Métodos de Pagos</a></li>
         </ul>
     </nav>
     
     <main class="contenedor">
-        <h2>¡Bienvenido a E-Lingua Academy!</h2>
+        <h2 class="animate__animated animate__heartBeat">¡Bienvenido a E-Lingua Academy!</h2>
         <h3>Somos tu plataforma para aprender idiomas de manera fácil y divertida.</h3>
 
         <p id="poesia">"Aprender otro idioma no es solamente aprender palabras diferentes para las mismas cosas, sino aprender otra manera de pensar acerca de las cosas". Flora Lewis</p>

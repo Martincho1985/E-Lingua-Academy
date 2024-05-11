@@ -4,10 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario de contacto</title>
+        <link rel="icon" type="logo.png" href="static/img/logo.png">
+        <link rel="stylesheet" href="static/css/estilos.css">
         <link rel="stylesheet" href="static/css/contacto.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static/icons/icons.css"> 
 
         <!-- Animate CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!--jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     </head>
 
@@ -43,33 +54,34 @@
             <div class="contacto-agrupado">
                 <div class="contacto-form">
                     <h3>Contactanos</h3>
-                    <form action="">
+                    <form id="datosForm">
                         <p>
-                            <label for="nombre-completo">Nombre completo</label>
-                            <input type="text" name="nombre-completo">
+                            <label for="nombre-completo">Nombre Completo</label>
+                            <input type="text" name="Nombre Completo" placeholder="Juan Perez" minlength="3" maxlength="30" pattern="[A-Za-zÁáÉéÍíÓóÚúÜü ]+">
                         </p>
                         <p>
-                            <label for="email">Dirección de correo electrónico</label>
-                            <input type="email" name="email" id="">
+                            <label for="email">Dirección de Correo Electrónico</label>
+                            <input type="email" name="Correo Electrónico" placeholder="juanperez@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                         </p>
                         <p>
-                            <label for="celu">Celular</label>
-                            <input type="tel" name="celu" id="">
+                            <label for="celu">Teléfono</label>
+                            <input type="tel" name="Teléfono" placeholder="Ingrese su número de teléfono" minlength="10" maxlength="15" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                         </p>
                         <p>
                             <label for="asunto">Asunto</label>
-                            <input type="text" name="asunto" id="">
+                            <input type="text" name="Asunto" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                         </p>
                         <p class="block">
                             <label for="msj">Mensaje</label>
-                            <textarea name="msj" id="" rows="3"></textarea>
+                            <textarea name="Mensaje" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" rows="3"></textarea>
                         </p>
                         <p class="block">
-                            <button type="submit">
-                                Enviar
-                            </button>
+                            <button type="submit"> Enviar </button>
                         </p>
                     </form>
+
+                    <!-- Archivo JavaScript externo -->
+                    <script src="/static/js/contacto.js"></script>
                 </div>
                 <div class="contacto-info">
                     <h4>Más información</h4>

@@ -22,7 +22,7 @@ header{
     display: inline-block;
     padding: 10px 20px; /* Adjust padding as needed */
     border-radius: 5px; /* Add rounded corners */
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     transition: background-color 0.3s; /* Smooth transition */
     padding-right: 30px;
 }
@@ -35,14 +35,14 @@ header{
 }
 h1{
     color: white;
-    font-size: 3vw;
+    font-size: 1.2vw;
 }
 
 /*ESTILOS AL NAVBAR*/
 .menu{
     background-color: #5A189A;
     border-top: 5px solid #a93afd;
-    height: 10vh;
+    height: 8vw;
     display: flex;
     align-items: center;
     justify-content: center; /* Para centrar horizontalmente */
@@ -56,12 +56,59 @@ h1{
     align-items: center; /* Para centrar verticalmente */
     justify-content: space-between; /* Distribuye los elementos equitativamente */
     width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+    
 }
 .botonera a {
+    border-radius: 10px;
+    border: 2px solid #c77dff;
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 1.5vw; 
+    padding: 15px 16px;
+
+    
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e2bff9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    border-radius: 10px;
+    border: 2px solid #c77dff;
+    background-color: #5A189A;
+    color: white;
+    padding: 15px 16px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 
