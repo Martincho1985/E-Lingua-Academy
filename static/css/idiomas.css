@@ -1,0 +1,250 @@
+/*Valoraciones de estrellas*/
+.estrella-rellena{
+    color: gold;
+    text-shadow: -1px -1px 0 black, 
+    1px -1px 0 black, 
+    -1px 1px 0 black, 
+    1px 1px 0 black;
+}
+
+/*Diseño Grid en el main*/
+.idiomas{
+    display: grid; 
+    gap: 15px; /* Espaciado entre elementos */
+    justify-items: center; /* Alineación horizontal de los elementos */
+    text-align: justify; /* Alineación del texto */
+    padding: 3%; /* Espaciado interno */
+    padding-top: 1%;
+}
+
+/*Animacion al h1 del idioma en cuestion*/
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/*Inglés*/
+@keyframes colorCycleEnglish {
+    0% {
+        color: red;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: blue;
+    }
+}
+/*Español*/
+@keyframes colorCycleSpanish {
+    0% {
+        color: red;
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: red;
+    }
+}
+/*Alemán*/
+@keyframes colorCycleGerman {
+    0% {
+        color: black;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: yellow;
+    }
+}
+/*Portugués*/
+@keyframes colorCyclePortuguese {
+    0% {
+        color: green;
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: blue;
+    }
+}
+/*Francés*/
+@keyframes colorCycleFrench {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: red;
+    }
+}
+
+/*Configuracion de los h1 de las paginas de idiomas*/
+#eng, #ger, #por, #fre, #spa {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 4vw;
+}
+#eng{
+    animation: pulse 1s infinite, colorCycleEnglish 2s infinite ;
+}
+#ger{
+    animation: pulse 1s infinite, colorCycleGerman 2s infinite ;
+}
+#por{
+    animation: pulse 1s infinite, colorCyclePortuguese 2s infinite ;
+}
+#fre{
+    animation: pulse 1s infinite, colorCycleFrench 2s infinite ;
+}
+#spa{
+    animation: pulse 1s infinite, colorCycleSpanish 2s infinite ;
+}
+
+.radio-option {
+    display: block;  /* Hace que cada opción sea un bloque independiente */
+    margin-bottom: 10px;  /* Agrega espacio entre las opciones */
+}
+
+fieldset {
+    border: 3px solid #340254;  /* Borde para el fieldset */
+    padding: 10px;  /* Espacio interior del fieldset */
+    width: 100%;
+}
+
+legend {
+    font-weight: bold;  /* Resalta el texto de la leyenda */
+}
+
+iframe{
+    border-radius: 20px;
+    border: 10px solid #340254;
+}
+
+.ingles a, .aleman a, .español a, .frances a, .portugues a{
+    width: 30%;
+    padding: 5px;
+    margin-top: 10px;
+    color: white;
+    font-size: 2vw;
+    font-family: "Poetsen One", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    background-color: blueviolet;
+    border-radius: 5px;
+    border: 2px solid #340254;
+    cursor: pointer;
+}
+
+.ingles a:hover, .aleman a:hover, .español a:hover, .frances a:hover, .portugues a:hover{
+    background-color: #340254;
+}
+
+
+/* 1- Para Pantallas (Desktops, Laptops y Netbooks) de mas de 768px */
+@media only screen and (min-width: 768px) {
+    .idiomas {
+      grid-template-columns: repeat(3, 1fr); /* Cinco columnas */
+      grid-template-rows: repeat(5, auto); /* Seis filas*/
+    }
+    .idiomas h1{
+        grid-column: span 3;
+    }
+    .objetivo{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .nivel{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .turno{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    /*Configuracion de los videos de los idiomas en el grid*/
+    .ingles{
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 3; /* Esto abarca fila 2 y 3 */
+        width: 100%;
+        margin-left: 40px;
+        background-image: url('/static/img/ingles.avif'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        display: flex; /* Para mantener el contenido interno alineado */
+        flex-direction: column; /* Alinea los elementos internos verticalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .aleman{
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 3; /* Esto abarca fila 2 y 3 */
+        width: 100%;
+        margin-left: 40px;
+        background-image: url('/static/img/aleman.jpg'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        display: flex; /* Para mantener el contenido interno alineado */
+        flex-direction: column; /* Alinea los elementos internos verticalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .español{
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 3; /* Esto abarca fila 2 y 3 */
+        width: 100%;
+        margin-left: 40px;
+        background-image: url('/static/img/español.jpg'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        display: flex; /* Para mantener el contenido interno alineado */
+        flex-direction: column; /* Alinea los elementos internos verticalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .portugues{
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 3; /* Esto abarca fila 2 y 3 */
+        width: 100%;
+        margin-left: 40px;
+        background-image: url('/static/img/brazil.jpg'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        display: flex; /* Para mantener el contenido interno alineado */
+        flex-direction: column; /* Alinea los elementos internos verticalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .frances{
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 3; /* Esto abarca fila 2 y 3 */
+        width: 100%;
+        margin-left: 40px;
+        background-image: url('/static/img/frances.jpg'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        display: flex; /* Para mantener el contenido interno alineado */
+        flex-direction: column; /* Alinea los elementos internos verticalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .comentarios{
+        grid-column: 1 / span 3;
+        grid-row: 5;
+    }
+}

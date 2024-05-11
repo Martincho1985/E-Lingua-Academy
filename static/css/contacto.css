@@ -1,99 +1,12 @@
-*{
-    box-sizing:border-box ;
-}
 
-/******Header********/
-
-.header {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #10002B;
-    border-bottom: none;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-}
-
-.banner{
-    display: flex;
-    align-items: center;
-}
-
-#logo {
-    width: 7vw;
-    padding: 10px;
-}
-
-h1 {
-    color: white;
-    font-size: 3vw;
-}
-
-.banner .btn {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.5vw;
-    transition: background-color 0.3s;
-    padding-right: 30px;
-    cursor: pointer;
-}
-
-/**********Nav***********/
-
-
-.menu{
-    background-color: #5A189A;
-    border-top: 5px solid #a93afd;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Para centrar horizontalmente */
-}
-.botonera{
-    list-style: none;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: 0;
-    display: flex;
-    align-items: center; /* Para centrar verticalmente */
-    justify-content: space-between; /* Distribuye los elementos equitativamente */
-    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
-}
-.botonera a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5vw; 
-}
-
-
-
-/*************** body ***************/
-
-
-
-body{
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
     font-family: 'Roboto', sans-serif;
     background: #e2bff9 ;
     color: #fff;
     padding: 0 1.5em;
-}
-
-.container{
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5em;
 }
 
 .logo{
@@ -182,11 +95,7 @@ body{
 
 
 @media (min-width: 700px) {
-    body {
-        padding: 0 4rem;
-    }
-
-
+   
     .contacto-agrupado {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -203,89 +112,3 @@ body{
         text-align: left;
     }
 }
-
-/*********** ESTILOS AL FOOTER ***********/
-
-
-
-footer {
-    background-color: #10002B;
-    color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas para pantallas grandes */
-    grid-template-rows: auto; /* Ajuste automático de altura */
-    gap: 10px; /* Espacio entre elementos */
-    padding: 10px; /* Espacio interno */
-    width: 100%;
-}
-footer #copyright{
-    text-align: left; 
-    font-style: italic;
-    font-size: 1.2vw;
-    padding-top: 2%;
-    padding-left: 3%;
-}
-footer .redes,
-footer .ubicacion {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-}
-footer .iconos {
-    list-style: none;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 3vw;
-    margin: 0;
-    display: flex;
-    justify-content: space-between; /* Distribuye equitativamente */
-    width: 100%; /* Ocupar todo el ancho de su contenedor */
-}
-footer .ubicacion iframe {
-    border-radius: 10px; /* Borde redondeado para iframe */
-    width: 50%;
-}
-footer .ubicacion p {
-    padding-left: 3%; /* Espacio entre iframe y texto */
-    padding-right: 5%;
-    text-align: justify;
-    font-size: 1vw;
-}
-
-
-/* Para Pantallas (Celulares) con menos de 599px */
-
-@media only screen and (max-width: 599px) {
-
-    footer {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
-        grid-template-rows: auto; /* Ajuste automático de altura */
-        text-align: center; /* Centra el texto para cada elemento */
-    }
-    footer .iconos {
-        justify-content: center; /* Centra horizontalmente */
-    }
-    footer #copyright{
-        text-align: center; 
-        font-size: 2vw;
-    }
-    footer .iconos {
-        padding-left: 25%;
-        padding-right: 25%;
-        padding-top: 2%;
-        padding-bottom: 1%;
-        font-size: 4vw;
-        margin: 0;
-        display: flex;
-        justify-content: space-between; /* Distribuye equitativamente */
-        width: 100%; /* Ocupar todo el ancho de su contenedor */
-    }
-    footer .ubicacion {
-        display: flex;
-        flex-direction: column;
-    }
-    footer .ubicacion p {
-        font-size: 2vw;
-        padding-top: 2%;
-    }
-} 

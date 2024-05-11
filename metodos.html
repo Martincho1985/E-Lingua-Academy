@@ -4,7 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Metodos de pago</title>
+        <link rel="icon" type="logo.png" href="static/img/logo.png">
+        <link rel="stylesheet" href="static/css/estilos.css">
         <link rel="stylesheet" href="static/css/metodos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static/icons/icons.css"> 
+
+        <!--jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     </head>
     
     <header class="header">
@@ -34,35 +46,35 @@
     <body>
 
         <div class="container">
-            <form action="">
+            <form id="datosForm">
                 <div class="fila">
                         <div class="columna">
                             <h3 class="titulo">Dirección de facturación</h3>
                         <div class="input-box">
-                            <span>Nombre completo :</span>
-                            <input type="text" placeholder="Juan Perez">
+                            <span>Nombre Completo :</span>
+                            <input type="text" name="Nombre Completo" placeholder="Juan Perez" minlength="3" maxlength="30" pattern="[A-Za-zÁáÉéÍíÓóÚúÜü ]+">
                         </div>
                         <div class="input-box">
-                            <span>Correo electronico :</span>
-                            <input type="email" placeholder="juanperez@gmail.com">
+                            <span>Correo electrónico :</span>
+                            <input type="email" name="Correo electrónico" placeholder="juanperez@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                         </div>
                         <div class="input-box">
                             <span>Dirección :</span>
-                            <input type="text" placeholder="Dpto. - Calle - Localidad">
+                            <input type="text" name="Dirección" placeholder="Dpto. - Calle - Localidad" minlength="3" maxlength="30" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                         </div>
                         <div class="input-box">
                             <span>Ciudad :</span>
-                            <input type="text" placeholder="Capital Federal">
+                            <input type="text" name="Ciudad" placeholder="Capital Federal" minlength="3" maxlength="30" pattern="[A-Za-zÁáÉéÍíÓóÚúÜü ]+">
                         </div>
 
                         <div class="flex">
                             <div class="input-box">
                                 <span>Provincia :</span>
-                                <input type="text" placeholder="Buenos Aires">
+                                <input type="text" name="Provincia" placeholder="Buenos Aires" minlength="3" maxlength="30" pattern="[A-Za-zÁáÉéÍíÓóÚúÜü ]+">
                             </div>
                             <div class="input-box">
                                 <span>Código Postal :</span>
-                                <input type="text" placeholder="1234">
+                                <input type="number" name="Código Postal" placeholder="1234" minlength="3" oninput="limitarInput(this, 4)" maxlength="4" pattern="[0-9]{8}">
                             </div>
                         </div>
 
@@ -76,26 +88,26 @@
                         <img src="static/img/imgcards.png" alt="tarjetas">
                     </div>
                     <div class="input-box">
-                        <span>Titular de la tarjeta:</span>
-                        <input type="text" placeholder="Juan Perez">
+                        <span>Titular de la Tarjeta:</span>
+                        <input type="text" name="Titular de la Tarjeta" placeholder="Juan Perez" minlength="3" oninput="limitarInput(this, 15)" maxlength="15" pattern="[A-Za-zÁáÉéÍíÓóÚúÜü ]+">
                     </div>
                     <div class="input-box">
                         <span>Número de Tarjeta de Crédito:</span>
-                        <input type="number" placeholder="1111 2222 3333 4444">
+                        <input type="number" name="Número de la Tarjeta de Crédito" placeholder="1111 2222 3333 4444" oninput="limitarInput(this, 12)" maxlength="12" pattern="[0-9]{8}">
                     </div>
                     <div class="input-box">
                         <span>Mes de Vencimiento:</span>
-                        <input type="text" placeholder="Agosto">
+                        <input type="text" name="Mes de Vencimiento" placeholder="Agosto" minlength="3" maxlength="10" pattern="[A-Za-zÁáÉéÍíÓóÚúÜü ]+">
                     </div>
 
                     <div class="flex">
                         <div class="input-box">
-                            <span>Año de vencimiento:</span>
-                            <input type="number" placeholder="2027">
+                            <span>Año de Vencimiento:</span>
+                            <input type="number" name="Año de Vencimiento" placeholder="2027" oninput="limitarInput(this, 4)" maxlength="4" pattern="[0-9]{8}">
                         </div>
                         <div class="input-box">
-                            <span>Código de seguridad:</span>
-                            <input type="number" placeholder="123">
+                            <span>Código de Seguridad:</span>
+                            <input type="number" name="Código de Seguridad" placeholder="123" oninput="limitarInput(this, 3)" maxlength="3" pattern="[0-9]{8}">
                         </div>
                     </div>
 
@@ -104,6 +116,10 @@
 
                 <button type="submit" class="boton">Enviar</button>
             </form>
+
+             <!-- Archivo JavaScript externo -->
+            <script src="/static/js/validar_pago.js"></script>
+            <script src="/static/js/limitarCampos.js"></script>
         </div>
 
         <footer>
