@@ -1,4 +1,4 @@
-
+/*CONTENIDO*/
 .container{
     margin-left: auto;
     margin-right: auto;
@@ -8,39 +8,32 @@
     color: #fff;
     padding: 0 1.5em;
 }
-
 .logo{
     text-align: center;
     font-size: 3em;
+    padding: 2%;
+    color:#6d168c;
 }
-
 .contacto-agrupado{
     box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
-
 .contacto-agrupado >* {
     padding: 1em;
 }
-
 .contacto-form{
     background: #c77dff;
 }
-
 .contacto-form form{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
 .contacto-form form .block {
     grid-column: 1 / 3;
 }
-
 .contacto-form form p{
     margin: 0;
     padding: 1em;
 }
-
-
 .contacto-form form button,
 .contacto-form form input,
 .contacto-form form textarea {
@@ -53,7 +46,6 @@
     border-bottom: 1px solid #fff;
     cursor: pointer;
 }
-
 .contacto-form form button{
     background: #240046;
     color: #fff;
@@ -62,31 +54,25 @@
     padding: 1em;
     cursor: pointer;
 }
-
-.contacto-form form button:hover
-.contacto-form form button:focus {
-    background: #240046;
+.contacto-form form button:hover{
+    background: #8607a9;
     color: #fff;
     transition: background-color 1s ease-out;
     outline: 0;
 }
-
 .contacto-info{
     background: #240046;
 }
-
 .contacto-info h4,
 .contacto-info ul,
 .contacto-info p {
     text-align: center;
     margin: 0 0 1rem 0;
 }
-
 .contacto-info ul {
     list-style: none;
     padding: 0;
 }
-
 .contacto-info ul li{
     padding: .3em;
 }

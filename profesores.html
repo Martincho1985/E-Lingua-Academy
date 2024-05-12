@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfiles de Profesionales de Idiomas</title>
-  <link rel="icon" type="logo.png" href="static/img/logo.png">
+  <link rel="icon" type="logo.png" href="/static/img/logo.png">
   <link rel="stylesheet" href="/static/css/estilos.css">
   <link rel="stylesheet" href="/static/css/profesores.css">
   <link rel="stylesheet" href="/static/icons/icons.css">
@@ -12,63 +12,69 @@
 <body>
   <header>
     <div class="banner"> 
-        <img id="logo" src="/static/img/logo.png" alt="logo">
+        <img id="logo" src="static/img/logo.png" alt="logo">
         <h1>E-LINGUA ACADEMY</h1>
     </div>
-   <div class="banner">
-        <a class="btn" href="#">Log in</a>
-        <a class="btn" href="#">Sign up</a>
-   </div>
-</header>
-<nav class="menu">
-    <ul class="botonera">
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn">Cursos <span class="icon-arrow-down2"></span></button>
-           <div class="dropdown-content">
-             <a href="#">Alemán</a>
-             <a href="#">Francés</a>
-             <a href="#">Inglés</a>
-             <a href="#">Italiano</a>
-             <a href="#">Portugues</a>
-           </div>
-          </div>
-        </li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Metodos de Pagos</a></li>
-    </ul>
-</nav>
-  <div class="grid-container">
-    <div class="profesor">
-      <img src="profesor1.jpg" alt="Mantin">
-      <h2>Martín Leiva</h2>
-      <p>Profesor de inglés</p>
-      <p>Con más de 10 años de experiencia en la enseñanza del inglés como segundo idioma, Mantin es un apasionado por ayudar a sus estudiantes a alcanzar fluidez y confianza en el idioma. Su enfoque dinámico y personalizado hace que las clases sean interactivas y divertidas, adaptándose a las necesidades individuales de cada alumno.</p>
-     </div>
-     <div class="profesor">
-      <img src="profesor2.jpg" alt="Tom">
-      <h2>Tom Harry</h2>
-      <p>Profesor de italiano</p>
-      <p>Tom es un lingüista experimentado especializado en la enseñanza del italiano como lengua extranjera. Con una sólida formación académica y una pasión por la cultura italiana, sus clases van más allá de la gramática y el vocabulario, ofreciendo a los estudiantes una comprensión profunda del idioma y la sociedad italófona.</p>
-     </div>
-     <div class="profesor">
-      <img src="profesor3.jpg" alt="Nahuel">
-      <h2>Nahuel Jiménez</h2>
-      <p>Profesor de portugués</p>
-      <p>Nahuel es un experto en la enseñanza del portugués, con un enfoque especial en la cultura y el idioma de Brasil y Portugal. Su pasión por la lengua portuguesa se refleja en su enseñanza, donde combina habilidades lingüísticas con conocimientos culturales para ofrecer una experiencia de aprendizaje completa y enriquecedora.</p>
-     </div>
-    <div class="profesor">
-      <img src="img/andres2004.jpg" alt="Andrés">
-      <h2>Andrés Carlin</h2>
-      <p>Profesor de francés y alemán</p>
-      <p>Andrés es un apasionado por el francés y el alemán, así como por las culturas que representan. Con una amplia experiencia en la enseñanza de ambos idiomas, se esfuerza por transmitir no solo habilidades lingüísticas, sino también un profundo entendimiento de la literatura, la historia y la sociedad de ambos países.</p>
+    <div class="banner">
+        <a class="btn" href="/login.html">Log in</a>
+        <a class="btn" href="/registro.html">Sign up</a>
     </div>
-      
-  </div>
-    
+  </header>
+  <nav class="menu">
+    <ul class="botonera">
+      <li>
+        <div class="dropdown">
+          <a href="nosotros.html" class="dropbtn">Acerca de Nosotros</a>
+          <div class="dropdown-content">
+              <a href="profesores.html">Equipo</a>
+              <a href="nosotros.html">Historia</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+            <button class="dropbtn">Cursos</button>
+            <div class="dropdown-content">
+              <a href="#">Alemán</a>
+              <a href="#">Francés</a>
+              <a href="#">Inglés</a>
+              <a href="#">Español</a>
+              <a href="#">Portugués</a>
+            </div>
+        </div>
+      </li> <!-- Cambie el enlace por un botón -->
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="metodos.html">Métodos de Pagos</a></li>
+    </ul>
+  </nav>
+  <main class="grid-container">
+    <div class="profesor">
+        <img src="profesor1.jpg" alt="Mantin">
+        <h2>Martín Leiva</h2>
+        <p>Profesor de inglés</p>
+        <p>Con más de 10 años de experiencia en la enseñanza del inglés como segundo idioma, Mantin es un apasionado por ayudar a sus estudiantes a alcanzar fluidez y confianza en el idioma. Su enfoque dinámico y personalizado hace que las clases sean interactivas y divertidas, adaptándose a las necesidades individuales de cada alumno.</p>
+    </div>
+    <div class="profesor">
+        <img src="profesor2.jpg" alt="Tom">
+        <h2>Tom Harry</h2>
+        <p>Profesor de italiano</p>
+        <p>Tom es un lingüista experimentado especializado en la enseñanza del italiano como lengua extranjera. Con una sólida formación académica y una pasión por la cultura italiana, sus clases van más allá de la gramática y el vocabulario, ofreciendo a los estudiantes una comprensión profunda del idioma y la sociedad italófona.</p>
+    </div>
+    <div class="profesor">
+        <img src="profesor3.jpg" alt="Nahuel">
+        <h2>Nahuel Jiménez</h2>
+        <p>Profesor de portugués</p>
+        <p>Nahuel es un experto en la enseñanza del portugués, con un enfoque especial en la cultura y el idioma de Brasil y Portugal. Su pasión por la lengua portuguesa se refleja en su enseñanza, donde combina habilidades lingüísticas con conocimientos culturales para ofrecer una experiencia de aprendizaje completa y enriquecedora.</p>
+    </div>
+    <div class="profesor">
+        <img src="img/andres2004.jpg" alt="Andrés">
+        <h2>Andrés Carlin</h2>
+        <p>Profesor de francés y alemán</p>
+        <p>Andrés es un apasionado por el francés y el alemán, así como por las culturas que representan. Con una amplia experiencia en la enseñanza de ambos idiomas, se esfuerza por transmitir no solo habilidades lingüísticas, sino también un profundo entendimiento de la literatura, la historia y la sociedad de ambos países.</p>
+    </div>   
+  </main>
   <footer>
-    <div>
+    <div id="copyright">
         <p>Copyright © 2024 E-Lingua Academy.com. Todos los derechos reservados.</p>
     </div>
     <div class="redes">
@@ -80,8 +86,8 @@
     </div>
     <div class="ubicacion">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6568.062053475883!2d-58.39493812972943!3d-34.603376932412615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaea670d4e67%3A0x2198c954311ad6d9!2sDa%20Vinci%20%7C%20Primera%20Escuela%20de%20Arte%20Multimedial!5e0!3m2!1ses!2sar!4v1713625653880!5m2!1ses!2sar" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p>Av. Corrientes 2037, C1001 Cdad. Autónoma de Buenos Aires</p>
+        <p>Av. Corrientes 2037, C1001 Cdad. Autónoma de Buenos Aires.</p>
     </div>
-</footer>
+  </footer>
 </body>
 </html>

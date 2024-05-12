@@ -1,51 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 1500px;
-    margin: 0 auto;
+/*Formulario de registro*/
+main{
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #10002B;
-    border-bottom: 1px solid #ddd;
-    z-index: 1000;
 }
-
-.banner {
-    display: flex;
-    align-items: center;
-}
-
-#logo {
-    width: 7vw;
-    padding: 10px;
-}
-
-h1 {
-    color: white;
-    font-size: 3vw;
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image: radial-gradient(#360db1 0.5px, transparent 0.5px), radial-gradient(#360db1 0.5px, #e5e5f7 0.5px);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    display: flex;
-    min-height: 100vh;
-}
-
 .form {
     background-color: #fff;
     margin: auto;
@@ -55,35 +12,27 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
     text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 4rem;
 }
-
 .form_titulo {
     font-size: 2rem;
     margin-bottom: .5em;
 }
-
 .form_p {
     font-weight: 300;
 }
-
 .form_link {
     font-weight: 400;
     color: #000;
 }
-
 .form_container {
     margin-top: 3em;
     display: grid;
     gap: 2.5em;
 }
-
 .form_agrupado {
     position: relative;
     --color: #5757577e;
 }
-
 .form_input {
     width: 100%;
     background: none;
@@ -95,19 +44,16 @@ body {
     border-bottom: 1px solid var(--color);
     font-family: "Roboto", sans-serif;
 }
-
 .form_input:focus,
 .form_input:not(:placeholder-shown) {
     color: #4d4646;
 }
-
 .form_input:focus + .form_label,
 .form_input:not(:placeholder-shown) + .form_label {
     transform: translateY(-12px) scale(.7);
     transform-origin: left top;
     color: #360db1;
 }
-
 .form_label {
     color: var(--color);
     cursor: pointer;
@@ -117,7 +63,6 @@ body {
     transform: translateY(10px);
     transition: transform .5s color .3s;
 }
-
 .form_submit {
     background: #360db1;
     color: #fff;
@@ -128,7 +73,9 @@ body {
     border: none;
     border-radius: .5em;
 }
-
+.form_submit:hover{
+    background-color: #860ed1;
+}
 .form_line {
     position: absolute;
     bottom: 0;
@@ -140,11 +87,11 @@ body {
     transform: left bottom;
     transition: transform .4s;
 }
-
 .form_input:focus ~ .form_line,
 .form_input:not(:placeholder-shown) ~ .form_line {
     transform: scale(1);
 }
+
 
 @media (max-width: 425px) {
     .form_titulo {

@@ -17,17 +17,20 @@ header{
 }
 .banner .btn {
     color: white;
+    width: 5vw;
     text-decoration: none;
     margin-bottom: 10px;
+    margin-right: 20px;
     display: inline-block;
     padding: 10px 20px; /* Adjust padding as needed */
     border-radius: 5px; /* Add rounded corners */
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     transition: background-color 0.3s; /* Smooth transition */
-    padding-right: 30px;
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 1.5; /* Ajusta el espacio entre líneas */
 }
 .banner .btn:hover {
-    background-color: #555; /* Change background color on hover */
+    background-color: #944cf9; /* Change background color on hover */
 }
 #logo{
     width: 7vw;
@@ -35,7 +38,7 @@ header{
 }
 h1{
     color: white;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
 }
 
 /*ESTILOS AL NAVBAR*/
@@ -55,16 +58,56 @@ h1{
     display: flex;
     align-items: center; /* Para centrar verticalmente */
     justify-content: space-between; /* Distribuye los elementos equitativamente */
-    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
-    
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/ 
 }
 .botonera a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.5vw; 
+    font-size: 1.4vw; 
+    padding: 15px 16px;
+}
+.botonera a:hover, button:hover{
+    color: yellow;
 }
 
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%; /* Ancho igual al botón */
+    min-width: 10vw;
+    z-index: 1;
+    text-align: center; /* Para centrar el contenido */
+}
+.dropdown-content a {
+    color: #320450;
+    padding: 10px 0px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #a534f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn {
+    background-color: #5A189A;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+button {
+    border: none;
+    width: 15vw; /*Ancho boton cursos*/
+}
 
 /*ESTILOS AL CUERPO PRINCIPAL*/
 main{
@@ -97,13 +140,17 @@ footer .ubicacion {
 }
 footer .iconos {
     list-style: none;
+    font-size: 3vw;
     padding-left: 15%;
     padding-right: 15%;
-    font-size: 3vw;
     margin: 0;
     display: flex;
     justify-content: space-between; /* Distribuye equitativamente */
     width: 100%; /* Ocupar todo el ancho de su contenedor */
+    cursor: pointer;
+}
+footer .iconos span:hover {
+    color: #a93afd; /* Cambia el color del ícono cuando pasas el mouse por encima */
 }
 footer .ubicacion iframe {
     border-radius: 10px; /* Borde redondeado para iframe */
