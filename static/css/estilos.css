@@ -13,15 +13,14 @@ header{
 }
 .banner{
     display: flex;
+    justify-content: center;
     align-items: center;
 }
+
 .banner .btn {
+    width: 5vw; /* Adjust the width as needed */
     color: white;
-    width: 5vw;
     text-decoration: none;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    display: inline-block;
     padding: 10px 20px; /* Adjust padding as needed */
     border-radius: 5px; /* Add rounded corners */
     font-size: 1.5vw;
@@ -29,6 +28,7 @@ header{
     text-align: center; /* Centra el texto horizontalmente */
     line-height: 1.5; /* Ajusta el espacio entre líneas */
 }
+
 .banner .btn:hover {
     background-color: #944cf9; /* Change background color on hover */
 }
@@ -45,7 +45,7 @@ h1{
 .menu{
     background-color: #5A189A;
     border-top: 5px solid #a93afd;
-    height: 10vh;
+    height: 17vh;
     display: flex;
     align-items: center;
     justify-content: center; /* Para centrar horizontalmente */
@@ -55,58 +55,79 @@ h1{
     padding-left: 50px;
     padding-right: 50px;
     margin: 0;
+    display: grid;
+    gap: 20px; /* Espaciado entre botones */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta automáticamente el número de columnas */
+    padding: 20px; /* Espaciado alrededor de la cuadrícula */
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */ 
+}
+.botonera li{
+    list-style-type: none; /* Removes the bullet points */
     display: flex;
-    align-items: center; /* Para centrar verticalmente */
-    justify-content: space-between; /* Distribuye los elementos equitativamente */
-    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/ 
+    justify-content: center; 
+    padding: 0px 7px;
 }
 .botonera a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.4vw; 
-    padding: 15px 16px;
+    font-size: 1.5vw;
 }
 .botonera a:hover, button:hover{
     color: yellow;
 }
 
+
 /* Estilos para el menú desplegable */
 .dropdown {
-    position: relative;
-    display: inline-block;
+    padding: 0px 13px;
+    position:relative;
+    display: flex;
+    width: 100%;
+    justify-content: center; 
+    text-align: center;
+    flex-direction: column;
+
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 100%; /* Ancho igual al botón */
-    min-width: 10vw;
-    z-index: 1;
-    text-align: center; /* Para centrar el contenido */
-}
-.dropdown-content a {
-    color: #320450;
-    padding: 10px 0px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content a:hover {
-    background-color: #a534f1;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropbtn li a{
+    text-align: center;
 }
 .dropbtn {
+    width: 100%;
     background-color: #5A189A;
     color: white;
     font-size: 1.5vw;
     font-weight: bold;
     cursor: pointer;
 }
-button {
-    border: none;
-    width: 15vw; /*Ancho boton cursos*/
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%; /* This ensures the dropdown content matches the width of the dropbtn */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column; /* Ensures items are laid out as rows in one column */
+}
+.dropdown-content a {
+    width: 100%;
+    color: #320450;
+    padding: 10px 0px;
+    display: block;
+    text-align: center; /* Centers the text within each link */
+}
+.dropdown-content a:hover {
+    background-color: #a534f1;
 }
 
 /*ESTILOS AL CUERPO PRINCIPAL*/
@@ -166,8 +187,48 @@ footer .ubicacion p {
 
 /* Para Pantallas (Celulares) con menos de 599px */
 
-@media only screen and (max-width: 599px) {
 
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* Estilos para tablets aquí */
+    .menu {
+        height: 20vh;
+
+    }
+    .botonera {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas más anchas para tablets */
+    }
+    /* Ajustes adicionales para tablets si son necesarios */
+    body {
+        font-size: 16px;
+    }
+    .banner img {
+        width: 80%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 599px) {
+    .menu {
+        height: 23vh;
+
+    }
+    .menu, .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .botonera {
+        display: grid; /* Establece la botonera como un contenedor de cuadrícula */
+        grid-template-columns: 1fr 1fr; /* Una sola columna */
+        gap: 15px; /* Espaciado entre elementos de la cuadrícula */
+        /* Ajusta el padding y otros estilos según sea necesario */
+    }
+    .botonera a, .banner .btn {
+        font-size: 2vw; /* Slightly larger font size for tablets */
+    }
+    .banner .btn {
+        width: 40px;
+    }
     footer {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
         grid-template-rows: auto; /* Ajuste automático de altura */
@@ -199,5 +260,4 @@ footer .ubicacion p {
         font-size: 2vw;
         padding-top: 2%;
     }
-} 
-
+}
