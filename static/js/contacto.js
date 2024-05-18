@@ -11,6 +11,13 @@ $(document).ready(function () {
                 formValido = false;
             }
         });
+        $("#datosForm select").each(function () {
+            // Asumiendo que la primera opción es la predeterminada y no es válida
+            if ($(this).val() === "" || $(this).val() === "default") {
+                alert("Por favor, seleccione una opción para: Género");
+                formValido = false;
+            }
+        });
 
         // Si todos los campos están completos, puedes enviar el formulario
         if (formValido) {
