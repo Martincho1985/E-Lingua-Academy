@@ -76,6 +76,23 @@
 .contacto-info ul li{
     padding: .3em;
 }
+.contacto-form form select {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    background: #240046;
+}
+
+.contacto-form form select:hover {
+    background: #8607a9; 
+    color: #fff;
+    transition: background-color 1s ease-out;
+}
 
 /*Pantallas grandes*/
 
@@ -97,21 +114,4 @@
         padding: 1em;
         text-align: left;
     }
-}
-.contacto-form form select {
-    width: 100%;
-    padding: .7em;
-    border: none;
-    background: none;
-    outline: none;
-    color: #fff;
-    border-bottom: 1px solid #fff;
-    cursor: pointer;
-    background: #240046; /* Matches the button background */
-}
-
-.contacto-form form select:hover {
-    background: #8607a9; /* Matches the button hover background */
-    color: #fff;
-    transition: background-color 1s ease-out;
 }
