@@ -91,6 +91,23 @@ main{
 .form_input:not(:placeholder-shown) ~ .form_line {
     transform: scale(1);
 }
+.form_home_button {
+    display: inline-block;
+    color: #360db1;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: .8em 0;
+    margin-top: 1em;
+    border: none;
+    border-radius: .5em;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.form_home_button:hover {
+    Color: #860ed1;
+}
 
 
 @media (max-width: 425px) {
