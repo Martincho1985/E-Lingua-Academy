@@ -1,0 +1,233 @@
+/*ESTILOS GENERALES*/
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/*ESTILOS AL HEADER*/
+header{
+    background-color: #10002B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.banner{
+    display: flex;
+    align-items: center;
+}
+
+.banner .btn {
+    width: 5vw; /* Adjust the width as needed */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 1.5vw;
+    transition: background-color 0.3s; /* Smooth transition */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 1.5; /* Ajusta el espacio entre líneas */
+}
+
+.banner .btn:hover {
+    background-color: #944cf9; /* Change background color on hover */
+}
+#logo{
+    width: 7vw;
+    padding: 10px;
+}
+h1{
+    color: white;
+    font-size: 2.5vw;
+}
+
+/*ESTILOS AL NAVBAR*/
+.menu{
+    background-color: #5A189A;
+    border-top: 5px solid #a93afd;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */
+    padding: 10px;
+}
+.botonera{
+    list-style: none;
+    display: grid;
+    gap: 20px; /* Espaciado entre botones */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta automáticamente el número de columnas */
+    padding: 20px; /* Espaciado alrededor de la cuadrícula */
+    width: 100%; /* Para ocupar todo el ancho del nav y hacerlo responsivo*/
+    align-items: center;
+    justify-content: center; /* Para centrar horizontalmente */ 
+}
+.botonera li{
+    display: flex;
+    justify-content: center; 
+
+}
+.botonera a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+.botonera a:hover{
+    color: yellow;
+}
+
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn li a{
+    text-align: center;
+}
+.dropbtn {
+    background-color: #5A189A;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 150%; /* This ensures the dropdown content matches the width of the dropbtn */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #320450;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #a534f1;
+}
+
+/*ESTILOS AL CUERPO PRINCIPAL*/
+main{
+    background-color: #e2bff9;
+    padding: 20px;
+}
+
+/*ESTLOS AL FOOTER*/
+footer {
+    background-color: #10002B;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+footer .iconos {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
+}
+
+footer .iconos span:hover {
+    color: #a93afd;
+}
+
+footer .ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .ubicacion iframe {
+    border-radius: 10px;
+    width: 100%;
+}
+
+footer .ubicacion p {
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+
+/* Para Pantallas (Celulares) con menos de 599px */
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Estilos para tablets aquí */
+    .botonera {
+        display: flex; 
+        justify-content: center; 
+        gap: 10px;
+        padding: 0px;
+    }
+
+    .botonera a {
+        display: block; 
+        width: 100%; 
+        font-size: 16px;
+        white-space: normal;
+        text-align: center; 
+        padding: 10px;
+    }
+
+    
+    
+    .banner .btn {
+        font-size: 2.5vw;
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menu {
+        height: auto;
+        padding: 10px;
+    }
+    .botonera {
+        display: flex; 
+        justify-content: center; 
+        gap: 10px;
+        padding: 0px;
+    }
+
+    .botonera li {
+        flex: 1 1 45%; 
+        max-width: 45%; 
+        text-align: center; 
+        margin: 5px; 
+    }
+
+    .botonera a {
+        display: block; 
+        width: 100%; 
+        font-size: 16px;
+        white-space: normal;
+        text-align: center; 
+        padding: 10px;
+    }
+    .banner .btn {
+        width: 80px;
+        font-size: 3vw;
+    }
+    footer {
+        grid-template-columns: 1fr;
+    }
+}

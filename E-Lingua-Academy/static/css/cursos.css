@@ -1,0 +1,55 @@
+
+main{
+    min-height: calc(70vh - 70px); /* 70px es la altura del header */
+    background-color: #e2bff9;
+    padding-bottom: 20px; /* Altura estimada del footer */
+    position: relative; /* Asegura que el contenido del main se muestre correctamente */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    height: 100%; /* Para que el grid ocupe todo el alto del main */
+}
+.grid-item {
+    text-decoration: none; /* Remove underline */
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+}
+.grid-item img {
+    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+    height: auto; /* Permitir que la altura se ajuste automáticamente manteniendo la proporción */
+    max-width: 300px; /* Limitar el ancho máximo de las imágenes para mantener la consistencia */
+    min-height: 190px;
+    max-height: 200px; /* Limitar la altura máxima de las imágenes para mantener la consistencia */
+    border-radius: 10px; /* Añadir esquinas redondeadas */
+}
+.grid-item .title{
+    color:#5a189a;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 900;
+    padding-top: 30px;
+    transition: background-color 0.3s; /* Smooth transition */
+    padding: 20px; /* Add padding for better appearance */
+}
+/* Styles for the elements within the grid items */
+.grid-item .title:hover {
+    background-color: #5a189a; /* Change background color on hover to dark purple */
+    color: white; /* Change text color on hover */
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 600px) {
+    @media (max-width: 600px) {
+
+    }
+    .grid-item img {
+        width: 100%; /* Ensure images fill the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .grid-item .title {
+        font-size: 2vw; /* Increase font size for bigger text */
+    }
+} 

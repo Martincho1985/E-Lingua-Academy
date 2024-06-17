@@ -1,0 +1,38 @@
+/*Estilos Profesores*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  background-color: #c77dff;
+}
+.profesor {
+  text-align: center;
+  padding: 20px;
+  background-color:#e2bff9;
+}
+.profesor img {
+  width: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+}
+.profesor h2 {
+  color: #10002B;
+  margin: 10px 0;
+  font-family: "caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style:italic;
+}
+.profesor p {
+  color:#10002B;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1,8vw;
+  margin-bottom: 10px;
+}
+  

@@ -1,0 +1,121 @@
+/*Formulario de logueado*/
+main{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.form{
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    width: 400px;
+    padding: 4.5em 6em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb( 0 0 0 / 30%);
+    text-align: center;
+}
+.form_titulo{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+.form_p{
+    font-weight: 300;
+}
+.form_link{
+    font-weight: 400;
+    color: #000;
+}
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+.form_agrupado{
+    position: relative;
+    --color: #5757577e;
+}
+.form_input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: "Roboto", sans-serif;
+}
+.form_input:focus, .form_input:not(:placeholder-shown){
+    color: #4d4646;
+}
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #360db1
+}
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s color .3s;
+}
+.form_submit{
+    background: #360db1;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+.form_submit:hover{
+    background-color: #860ed1;
+}
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #360db1;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+.form_input:focus ~ .form_line,
+.form_input:not(:placeholder-shown) ~ .form_line{
+    transform: scale(1);
+}
+.form_home_button {
+    display: inline-block;
+    color: #360db1;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: .8em 0;
+    margin-top: 1em;
+    border: none;
+    border-radius: .5em;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.form_home_button:hover {
+    Color: #860ed1;
+}
+
+
+@media (max-width:425px){
+
+    .form_titulo{
+        font-size: 1.8rem;
+    }
+
+    form{
+        width: 300px;
+    }
+}
