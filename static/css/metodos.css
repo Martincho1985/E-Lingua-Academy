@@ -1,0 +1,101 @@
+/****Body*****/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e2bff9;
+    padding: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.container form{
+    width: 150vh;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+}
+form .fila{
+    display: flex;
+    gap: 5%; /*espacio entre facturacion y pago*/
+    flex-wrap: wrap;
+    padding-right: 35px;
+}
+.fila .columna{
+    flex: 1 1 250px;
+}
+.columna .titulo{
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.columna .input-box{
+    margin: 15px 0;
+}
+.input-box span {
+    display: block;
+    margin-bottom: 10px;
+}
+.input-box input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.columna .flex{
+    display: flex;
+    gap: 10%;
+}
+.flex .input-box{
+    margin-top: 5px; /*espacio entre provincia y cd postal*/
+}
+.input-box img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+form .boton{
+    width: 100%;
+    padding: 12px;
+    background: #8175d3;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+form .boton:hover{
+    background: #602994;
+}
+
+
+@media only screen and (max-width: 480px){
+    .container form {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    form .fila {
+        padding-right: 0;
+        gap: 2%;
+    }
+
+    .columna .titulo {
+        font-size: 18px;
+    }
+
+    .input-box input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    form .boton {
+        font-size: 15px;
+    }
+}
